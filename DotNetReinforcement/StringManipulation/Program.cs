@@ -18,7 +18,7 @@
         Console.WriteLine("My diminutives are \"Jona\", \"Jony\" and \"Jonita\"\n"); // double-quotation mark character escape \"
 
         PrintMyCategories();
-        Console.ReadLine();
+        _ = Console.Read();
     }
 
     private static void PrintMyCategories()

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DotNetReinforcement",
+    "\\DotNetReinforcement\\StringManipulation"
   ],
-  "SelectedNode": "\\C:\\Users\\jonathan.cumini\\Source\\Repos\\DotNetReinforcement",
+  "SelectedNode": "\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
   "PreviewInSolutionExplorer": false
 }
