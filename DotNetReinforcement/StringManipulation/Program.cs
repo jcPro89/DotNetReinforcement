@@ -17,6 +17,12 @@
 
         Console.WriteLine("My diminutives are \"Jona\", \"Jony\" and \"Jonita\"\n"); // double-quotation mark character escape \"
 
+        string dataDirectory = "C:\\instrument"; // backslash character escape \\
+        Console.WriteLine($"The paths for my application settings and output is {dataDirectory}, and these are the subdirectories:\n");        
+        dataDirectory = @"C:\instrument\data  C:\instrument\config
+            C:\instrument\log"; // Verbatim string literal
+        Console.WriteLine($@"And again...The path for my application settings and output is {dataDirectory}");
+
         PrintMyCategories();
         Console.ReadLine();
     }
