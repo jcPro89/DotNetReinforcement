@@ -24,7 +24,7 @@
         Console.WriteLine($@"And again...The path for my application settings and output is {dataDirectory}");
 
         PrintMyCategories();
-        Console.ReadLine();
+        _ = Console.Read();
     }
 
     private static void PrintMyCategories()
