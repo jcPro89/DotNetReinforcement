@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj": {}
+    "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj": {
+    "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
+        "projectUniqueName": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
         "projectName": "StringManipulation",
-        "projectPath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
+        "projectPath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
         "packagesPath": "C:\\Users\\jonathan.cumini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\obj\\",
+        "outputPath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonathan.cumini\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

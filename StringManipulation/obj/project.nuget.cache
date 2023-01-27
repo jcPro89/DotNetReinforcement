@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kAfZ/heOhvDbSQaAtNYEdJ3mOHgE0gBq+oBvkYJgK57406hmJ79hrH2k45i1aAoK30+mX0LjW9EeDMjw+zvEoQ==",
+  "dgSpecHash": "V6c0Qg1u5wsfxkKpY3lX16xpNGYigVP5E1bkb6zL3Z7ISKmeZ2jLQeWpsU9k2UzPs3oDdq55nuyAa92gChaUIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
+  "projectFilePath": "C:\\Users\\jonathan.cumini\\source\\repos\\DotNetReinforcement\\StringManipulation\\StringManipulation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
