@@ -2,6 +2,7 @@
 
 int result = Fibonacci(4);
 Console.WriteLine("The 4th Fibonacci number is " + result);
+Console.Read();
 
 static int Fibonacci(int n)
 {
