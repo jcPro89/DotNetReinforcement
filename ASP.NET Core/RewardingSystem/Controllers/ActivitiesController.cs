@@ -48,7 +48,7 @@ namespace RewardingApp.Controllers
         // GET: Activities/Create
         public IActionResult Create()
         {
-            return View("CreateActivity");
+            return View();
         }
 
         // POST: Activities/Create
@@ -56,7 +56,7 @@ namespace RewardingApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Description,Points")] Activity activity)
+        public async Task<IActionResult> Create([Bind("Id,Description,Points, Awards")] Activity activity)
         {
             if (ModelState.IsValid)
             {
@@ -64,6 +64,7 @@ namespace RewardingApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(activity);
         }
 
