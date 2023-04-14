@@ -1,0 +1,128 @@
+﻿@model RewardingApp.Models.Activity
+
+@{
+    ViewData["Title"] = "Activity Details";
+}
+
+<section class="my-sm-5">
+    <div class="container">
+        <div class="section-header d-flex mb-5">
+            <h1 class="h-02 flex-grow-1">Activity Details</h1>
+        </div>
+        <div class="row">
+            <form id="form" class="row g-3 w-90" asp-action="Create">
+            <div class="col-md-7">
+                <div class="section-header d-flex mb-5">
+                    <h1 class="h-04 flex-grow-1">Form</h1>
+                </div>
+                
+                    @*<div class="col-md-12">
+                        <label asp-for="Name" class="form-label">@Html.DisplayNameFor(model => model.Description)</label>
+                        <input asp-for="Name" type="text" class="form-control" id="inputEmail4"
+                               placeholder="@Html.DisplayNameFor(model => model.Description)">
+                        <span asp-validation-for="Name" class="invalid-feedback"></span>
+                    </div>*@
+                    <div class="col-12">
+                        <label asp-for="Description" class="form-label">
+                            @Html.DisplayNameFor(model =>
+                            model.Description)
+                        </label>
+                        <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                  placeholder="@Html.DisplayNameFor(model => model.Description)"></textarea>
+                        <span asp-validation-for="Description" class="invalid-feedback"></span>
+                    </div>
+                    @*<div class="col-md-4">
+                        <label asp-for="StartDate" class="form-label">
+                            @Html.DisplayNameFor(model =>
+                            model.StartDate)
+                        </label>
+                        <input asp-for="StartDate" type="date" class="form-control"
+                               placeholder="@Html.DisplayNameFor(model => model.StartDate)">
+                        <span asp-validation-for="StartDate" class="invalid-feedback"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="EndDate" class="form-label">@Html.DisplayNameFor(model => model.EndDate)</label>
+                        <input asp-for="EndDate" type="date" class="form-control"
+                               placeholder="@Html.DisplayNameFor(model => model.EndDate)">
+                        <span asp-validation-for="EndDate" class="invalid-feedback"></span>
+                    </div>*@
+                    <div class="col-md-4 mb-6">
+                        <label asp-for="Points" class="form-label">@Html.DisplayNameFor(model => model.Points)</label>
+                        <input asp-for="Points" type="number" class="form-control"
+                               placeholder="@Html.DisplayNameFor(model => model.Points)">
+                        <span asp-validation-for="Points" class="invalid-feedback"></span>
+                    </div>
+                    <div class="col-8 d-grid gap-2">
+                        <a class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#add-award">Add award</a>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="btn btn-outline-primary w-100" data-bs-toggle="modal"
+                                   data-bs-target="#cancel-activity">Cancel</a>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-outline-primary w-100">Post Activity</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5">
+                <div class="section-header d-flex mb-5">
+                    <h1 class="h-04 flex-grow-1">Awards</h1>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Award name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < 1; i++)
+                        {
+                            <input type="hidden" asp-for="@Model.Awards[i].Name" />
+                            <input type="hidden" asp-for="@Model.Awards[i].Description" />
+                            <tr>
+                                <td>Award Name</td>
+                                <td>Award Description</td>
+                                <td>
+                                    <a class="btn btn-outline-primary btn-sm">Edit</a>
+                                    <a class="btn btn-outline-primary btn-sm">Remove</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="add-award" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content br-20 pd-20">
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title h-04 text-prim-color">Award details</h5>
+            </div>
+            <form class="row g-3">
+                <div class="modal-body">
+                    <div class="row g-3">
+                        @*<div class="col-md-12">
+                            <label asp-for="Awards.Name" class="form-label">Name</label>
+                            <input asp-for="Awards.Name" type="text" class="form-control" id="inputEmail4">
+                        </div>*@
+                       @* <div class="col-12">
+                            <label asp-for="Award. .Awards...Description" for="inputAddress" class="form-label">Description</label>
+                            <textarea asp-for="@Model.Awards.Description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
+                    <input class="btn btn-primary w-100" type="submit" value="Confirm"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
