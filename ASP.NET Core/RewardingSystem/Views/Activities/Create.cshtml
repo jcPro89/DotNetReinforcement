@@ -72,7 +72,7 @@
             @*<a asp-action="Modale" class="btn btn-primary mb-2">Add award</a>*@
 
 
-            <div id="showmodal" class="modal fade" tabindex="-1" role="dialog">
+            <div id="AddAwardModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             @{
@@ -81,7 +81,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<button id='addAward' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showmodal">Add award</button>
+<button id='addAward' class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddAwardModal">Add award</button>
 
 
 
@@ -114,30 +114,3 @@
         </div>    
 </section>
 
-@*<div class="modal" id="add-award" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content br-20 pd-20">
-            <div class="modal-header justify-content-center">
-                <h5 class="modal-title h-04 text-prim-color">Award details</h5>
-            </div>
-            <form class="row g-3">
-                <div class="modal-body">
-                    <div class="row g-3">
-                        <div class="col-md-12">
-                            <label asp-for="Awards.Name" class="form-label">Name</label>
-                            <input asp-for="Awards.Name" type="text" class="form-control" id="inputEmail4">
-                        </div>
-                       @* <div class="col-12">
-                            <label asp-for="Award. .Awards...Description" for="inputAddress" class="form-label">Description</label>
-                            <textarea asp-for="@Model.Awards.Description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                        </div>*@
-                   @* </div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-outline-primary w-100" data-bs-dismiss="modal">Close</button>
-                    <input class="btn btn-primary w-100" type="submit" value="Confirm"></input>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>*@
