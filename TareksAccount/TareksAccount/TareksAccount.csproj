@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9130C177-0736-46F8-BD52-E887D46393C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TareksAccount</RootNamespace>
+    <AssemblyName>TareksAccount</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Accounting\AccountsData.cs" />
+    <Compile Include="Data\Accounting\GroupData.cs" />
+    <Compile Include="Data\Accounting\SubGroupData.cs" />
+    <Compile Include="Data\Clients\ClientsData.cs" />
+    <Compile Include="Data\Clients\ProductsAndServicesData.cs" />
+    <Compile Include="Data\Clients\QuotationData.cs" />
+    <Compile Include="Data\Clients\SalesInvoiceData.cs" />
+    <Compile Include="Data\ConnectionData.cs" />
+    <Compile Include="Data\Projects\ProjectData.cs" />
+    <Compile Include="Data\Settings\SettingsData.cs" />
+    <Compile Include="Logic\Accounting\AccountsLogic.cs" />
+    <Compile Include="Logic\Accounting\GroupLogic.cs" />
+    <Compile Include="Logic\Accounting\SubGroupLogic.cs" />
+    <Compile Include="Logic\Clients\ClientsLogic.cs" />
+    <Compile Include="Logic\Clients\ProductsAndServicesLogic.cs" />
+    <Compile Include="Logic\Clients\QuotationLogic.cs" />
+    <Compile Include="Logic\Clients\SalesInvoicesLogic.cs" />
+    <Compile Include="Logic\LoginLogic.cs" />
+    <Compile Include="Logic\Projects\ProjectsLogic.cs" />
+    <Compile Include="Logic\Settings\SettingsLogic.cs" />
+    <Compile Include="Presentation\Accounting\frmAccountAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmAccountAdd.Designer.cs">
+      <DependentUpon>frmAccountAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmAccounts.Designer.cs">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreditDebit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreditDebit.Designer.cs">
+      <DependentUpon>frmCreditDebit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmGeneralLedgerListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmGeneralLedgerListing.Designer.cs">
+      <DependentUpon>frmGeneralLedgerListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmPayments.designer.cs">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreateGroup.Designer.cs">
+      <DependentUpon>frmCreateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreateSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmCreateSubGroup.Designer.cs">
+      <DependentUpon>frmCreateSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmGroupList.Designer.cs">
+      <DependentUpon>frmGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmSubAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Accounting\frmSubAccountList.Designer.cs">
+      <DependentUpon>frmSubAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClientAddUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClientAddUpdate.Designer.cs">
+      <DependentUpon>frmClientAddUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClientGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClientGroups.Designer.cs">
+      <DependentUpon>frmClientGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmClients.Designer.cs">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmQuotation.Designer.cs">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmQuotationPrintLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmQuotationPrintLayout.Designer.cs">
+      <DependentUpon>frmQuotationPrintLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmReceipt.Designer.cs">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmSalesInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmSalesInvoice.Designer.cs">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmSalesInvoicePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\frmSalesInvoicePrint.Designer.cs">
+      <DependentUpon>frmSalesInvoicePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Clients\ProductsAndServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Clients\ProductsAndServices.Designer.cs">
+      <DependentUpon>ProductsAndServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmCustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmCustomMessageBox.Designer.cs">
+      <DependentUpon>frmCustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmFullExchangeRateHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmFullExchangeRateHistory.Designer.cs">
+      <DependentUpon>frmFullExchangeRateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Projects\frmProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Projects\frmProjects.Designer.cs">
+      <DependentUpon>frmProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Reports\TestReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Reports\TestReport.Designer.cs">
+      <DependentUpon>TestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Suppliers\frmManageSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Suppliers\frmManageSuppliers.Designer.cs">
+      <DependentUpon>frmManageSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Controls\LollipopButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopFileInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopFolderInPut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopSmallCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Controls\LollipopToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\UIManagers\DrawHelper.cs" />
+    <Compile Include="Resources\UIManagers\FontManager.cs" />
+    <Compile Include="Shared Entities\ProductService.cs" />
+    <Compile Include="Shared Entities\QuotationLine.cs">
+      <DependentUpon>QuotationLineModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Entities\QuotationLineModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuotationLineModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Entities\QuotationLineModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuotationLineModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Entities\QuotationLineModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuotationLineModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="SqlServerTypes\RequiredLineToRunProjects.cs" />
+    <Compile Include="Tarek_TestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarek_TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\Accounting\frmAccountAdd.resx">
+      <DependentUpon>frmAccountAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmAccounts.resx">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmCreditDebit.resx">
+      <DependentUpon>frmCreditDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmGeneralLedgerListing.resx">
+      <DependentUpon>frmGeneralLedgerListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmPayments.resx">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmCreateGroup.resx">
+      <DependentUpon>frmCreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmCreateSubGroup.resx">
+      <DependentUpon>frmCreateSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmGroupList.resx">
+      <DependentUpon>frmGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Accounting\frmSubAccountList.resx">
+      <DependentUpon>frmSubAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmClientAddUpdate.resx">
+      <DependentUpon>frmClientAddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmClientGroups.resx">
+      <DependentUpon>frmClientGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmClients.resx">
+      <DependentUpon>frmClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmQuotation.resx">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmQuotationPrintLayout.resx">
+      <DependentUpon>frmQuotationPrintLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmReceipt.resx">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmSalesInvoice.resx">
+      <DependentUpon>frmSalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\frmSalesInvoicePrint.resx">
+      <DependentUpon>frmSalesInvoicePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Clients\ProductsAndServices.resx">
+      <DependentUpon>ProductsAndServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmCustomMessageBox.resx">
+      <DependentUpon>frmCustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmFullExchangeRateHistory.resx">
+      <DependentUpon>frmFullExchangeRateHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Projects\frmProjects.resx">
+      <DependentUpon>frmProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Reports\TestReport.resx">
+      <DependentUpon>TestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Suppliers\frmManageSuppliers.resx">
+      <DependentUpon>frmManageSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="Shared Entities\QuotationLineModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuotationLineModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Shared Entities\QuotationLineModel.edmx.diagram">
+      <DependentUpon>QuotationLineModel.edmx</DependentUpon>
+    </None>
+    <None Include="Tarek_TestDataSet.xsc">
+      <DependentUpon>Tarek_TestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Tarek_TestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tarek_TestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Tarek_TestDataSet.xss">
+      <DependentUpon>Tarek_TestDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-1077550_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Resources\Roboto-Regular.ttf" />
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter-27230_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\600px-Delete_Article_Alert.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnome-printer-printing.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\996px-Symbol_confirmed.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13951634411281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000px-OOjs_UI_icon_articleNew-ltr.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000px-Human-gnome-session-logout.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueAvatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okSuccessIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shared Entities\QuotationLineModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuotationLineModel.edmx</DependentUpon>
+      <LastGenOutput>QuotationLineModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Shared Entities\QuotationLineModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuotationLineModel.edmx</DependentUpon>
+      <LastGenOutput>QuotationLineModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

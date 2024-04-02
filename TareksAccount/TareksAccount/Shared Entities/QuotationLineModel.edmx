@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Tarek_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="QuotationLines">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuotationId" Type="int" />
+          <Property Name="IsExpense" Type="bit" />
+          <Property Name="IsProductService" Type="bit" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="Incharge" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="CurrencyId" Type="int" />
+          <Property Name="FC_Amount" Type="money" />
+          <Property Name="LC_Amount" Type="money" />
+          <Property Name="ClientCharge" Type="money" />
+        </EntityType>
+        <EntityContainer Name="Tarek_TestModelStoreContainer">
+          <EntitySet Name="QuotationLines" EntityType="Self.QuotationLines" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Tarek_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="QuotationLine">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuotationId" Type="Int32" />
+          <Property Name="IsExpense" Type="Boolean" />
+          <Property Name="IsProductService" Type="Boolean" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="Incharge" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="CurrencyId" Type="Int32" />
+          <Property Name="FC_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="LC_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ClientCharge" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="QuotationLines" EntityType="Self.QuotationLine" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Tarek_TestModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="QuotationLines">
+            <EntityTypeMapping TypeName="Tarek_TestModel.QuotationLine">
+              <MappingFragment StoreEntitySet="QuotationLines">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QuotationId" ColumnName="QuotationId" />
+                <ScalarProperty Name="IsExpense" ColumnName="IsExpense" />
+                <ScalarProperty Name="IsProductService" ColumnName="IsProductService" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="Incharge" ColumnName="Incharge" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+                <ScalarProperty Name="FC_Amount" ColumnName="FC_Amount" />
+                <ScalarProperty Name="LC_Amount" ColumnName="LC_Amount" />
+                <ScalarProperty Name="ClientCharge" ColumnName="ClientCharge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
